@@ -2,7 +2,7 @@ const ethers = require('ethers');
 
 async function sendTransaction(_privatekey, _to, _value){
 
-    const provider = new ethers.providers.EtherscanProvider("rinkeby");
+    const provider = new ethers.providers.InfuraProvider("rinkeby");
     
     let wallet = new ethers.Wallet(_privatekey);
 
@@ -25,8 +25,8 @@ async function sendTransaction(_privatekey, _to, _value){
 
 async function main() {
     sendTransaction(
+        '000000',
         '0x0000',
-        '0x0000', 
         '0.01');
 }
 
